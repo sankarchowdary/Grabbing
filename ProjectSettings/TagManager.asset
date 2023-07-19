@@ -4,17 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CrossCollision
-  - Triangle
-  - GreenButton
-  - DropArea
-  - Main_Switch
-  - DropArea_2
-  - DropArea_3
-  - inductive_sensor
-  - DropArea_4
-  - stacking
-  - trigger
+  - Flame
+  - Projectile
+  - Destroyer
+  - MiniWorldCamera
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -22,8 +16,6 @@ TagManager:
   - 
   - Water
   - UI
-  - Hands
-  - Interactive
   - 
   - 
   - 
@@ -46,8 +38,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Pushable
+  - Character Collider
+  - Character Controller
+  - Teleport
   m_SortingLayers:
   - name: Default
     uniqueID: 0
