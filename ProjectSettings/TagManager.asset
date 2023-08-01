@@ -9,6 +9,11 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - G1_geo
+  - G2_geo
+  - G3_geo
+  - G4_geo
+  - G5_geo
   layers:
   - Default
   - TransparentFX
