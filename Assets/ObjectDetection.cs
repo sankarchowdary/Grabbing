@@ -8,6 +8,7 @@ public class ObjectDetection : MonoBehaviour
     public Vector3 DragObjectRotation;
     public Vector3 DragObjectpostion;
     public static ObjectDetection Instance;
+    public GameObject Restriced;
    
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class ObjectDetection : MonoBehaviour
    
     public void OnTriggerEnter(Collider other)
     {
+        Restriced.SetActive(true);
         // DragObject.transform.eulerAngles = DragObjectRotation;
         //  DragObject.transform.position = DragObjectpostion;
         print("Enter");
@@ -32,7 +34,8 @@ public class ObjectDetection : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         print("Exit");
-      //  MainController.Instance.RayCastControllerOn();
+        Restriced.SetActive(false);
+        //  MainController.Instance.RayCastControllerOn();
     }
 
 

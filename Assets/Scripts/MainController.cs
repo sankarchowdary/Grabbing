@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MainController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MainController : MonoBehaviour
     public static MainController Instance;
     public bool ButtonAcess;
     public GameObject[] TargetObjects;
+    public TextMeshProUGUI InformationText;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,8 @@ public class MainController : MonoBehaviour
         if (ButtonAcess)
         {
             ButtonCount++;
-           // LeftRayCast.SetActive(false);
-           // RightRayCast.SetActive(false);
+            LeftRayCast.SetActive(false);
+            RightRayCast.SetActive(false);
             
             print(ButtonCount);
             for (i = 0; i < 5; i++)
@@ -42,6 +44,7 @@ public class MainController : MonoBehaviour
                 button[ButtonCount].GetComponent<Button>().interactable = true;
                 DragObject[0].SetActive(true);
                 HighLightParts[0].SetActive(true);
+                InformationText.text = "Part1";
                
             }
             else if (id == 1)
@@ -49,24 +52,28 @@ public class MainController : MonoBehaviour
                 button[ButtonCount].GetComponent<Button>().interactable = true;
                 DragObject[1].SetActive(true);
                 HighLightParts[1].SetActive(true);
+                InformationText.text = "Part2";
             }
             else if (id == 2)
             {
                 button[ButtonCount].GetComponent<Button>().interactable = true;
                 DragObject[2].SetActive(true);
                 HighLightParts[2].SetActive(true);
+                InformationText.text = "Part3";
             }
             else if (id == 3)
             {
                 button[ButtonCount].GetComponent<Button>().interactable = true;
                 DragObject[3].SetActive(true);
                 HighLightParts[3].SetActive(true);
+                InformationText.text = "Part4";
             }
             else if (id == 4)
             {
                 // button[ButtonCount].GetComponent<Button>().interactable = true;
                 DragObject[4].SetActive(true);
                 HighLightParts[4].SetActive(true);
+                InformationText.text = "Part5";
             }
             ButtonAcess = false;
         }
@@ -86,7 +93,8 @@ public class MainController : MonoBehaviour
     public void ButtonAcessOn(int id)
     {
         ButtonAcess = true;
-        if(id == 0)
+        RayCastControllerOn();
+        if (id == 0)
         {
             DragObject[0].SetActive(false);
             HighLightParts[0].SetActive(false);
