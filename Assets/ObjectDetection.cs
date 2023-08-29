@@ -9,11 +9,20 @@ public class ObjectDetection : MonoBehaviour
     public Vector3 DragObjectpostion;
     public static ObjectDetection Instance;
     public GameObject Restriced;
+    
+
    
+     Shader shader1;
+
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
+        print("test");
+        
+       /// shader1 = Shader.Find("Universal Render Pipeline/Lit/Transparent/Diffuse");
+     //   Mat1.material.shader = shader1;
+       
     }
 
     // Update is called once per frame
@@ -21,19 +30,17 @@ public class ObjectDetection : MonoBehaviour
     {
        
     }
-
-   
-    public void OnTriggerEnter(Collider other)
+  
+     void OnTriggerEnter(Collider other)
     {
-        Restriced.SetActive(true);
-        // DragObject.transform.eulerAngles = DragObjectRotation;
-        //  DragObject.transform.position = DragObjectpostion;
-        print("Enter");
-     //   MainController.Instance.RayCastControllerOff();
+      
+            Restriced.SetActive(true);
+        
+       
     }
     public void OnTriggerExit(Collider other)
     {
-        print("Exit");
+     
         Restriced.SetActive(false);
         //  MainController.Instance.RayCastControllerOn();
     }

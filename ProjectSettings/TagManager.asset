@@ -16,6 +16,11 @@ TagManager:
   - G5_geo
   - LeftHand
   - RightHand
+  - TargetScrew2
+  - TargetScrewParts1
+  - TargetScrewParts2
+  - Screw1
+  - RestricedArea
   layers:
   - Default
   - TransparentFX
