@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GrabController : MonoBehaviour
 {
     public GameObject GrabObject;
-    public Transform GrabObject2; 
     public GameObject TargetObject;
     public GameObject HighLightObject;
     // public GameObject PreviousObject; 
@@ -92,11 +91,8 @@ public class GrabController : MonoBehaviour
     {
        
             YRotation = GrabObject.transform.eulerAngles.y;
-            ZaxisPosition = GrabObject.transform.localPosition.z;
-            XaxisPosition = GrabObject.transform.localPosition.x;
             print(YRotation);
-            print(ZaxisPosition);
-            print(XaxisPosition);
+          
      
        
        

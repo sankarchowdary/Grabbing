@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectDetection : MonoBehaviour
 {
-    public GameObject DragObject, TargetObject;
+   
     public Vector3 DragObjectRotation;
     public Vector3 DragObjectpostion;
     public static ObjectDetection Instance;
