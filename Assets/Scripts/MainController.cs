@@ -26,6 +26,7 @@ public class MainController : MonoBehaviour
     public GameObject HandControllerScreen;
     public GameObject MainModuleScreen;
     public GameObject set1,set2, screw1,screw2;
+    public GameObject OpenScreen;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
@@ -134,11 +135,12 @@ public class MainController : MonoBehaviour
     {
         for (int i = 0; i < 75; i++)
         {
-             ScrewsPart2[i].GetComponent<Renderer>().material = MainScrewMat;
+            OpenScreen.SetActive(true);
+            ScrewsPart2[i].GetComponent<Renderer>().material = MainScrewMat;
             button[ButtonCount].GetComponent<Button>().interactable = true;
 
             InformationText.text = "Click on Part2";
-
+           
 
         }
      
@@ -147,6 +149,7 @@ public class MainController : MonoBehaviour
     {
         for (int i = 0; i < 7; i++)
         {
+            OpenScreen.SetActive(true);
             print("test2");
             ScrewsPart1[i].GetComponent<Renderer>().material = MainScrewMat;
             button[ButtonCount].GetComponent<Button>().interactable = true;
@@ -197,6 +200,7 @@ public class MainController : MonoBehaviour
             HighLightParts[2].SetActive(false);
             TargetObjects[2].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Click On Part4";
+            OpenScreen.SetActive(true);
         }
         if (id == 3)
         {
@@ -204,6 +208,7 @@ public class MainController : MonoBehaviour
             HighLightParts[3].SetActive(false);
             TargetObjects[3].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Click On Part5";
+            OpenScreen.SetActive(true);
         }
         if (id == 4)
         {
