@@ -39,14 +39,18 @@ namespace UnityEngine.XR.Content.Interaction
 
         void OnCollisionEnter(Collision collision)
         {
+            print("Enter");
             if (CanInvoke(collision.gameObject))
                 m_OnEnter?.Invoke(collision);
+           
         }
 
         void OnCollisionExit(Collision collision)
         {
+            print("Exit");
             if (CanInvoke(collision.gameObject))
                 m_OnExit?.Invoke(collision);
+           
         }
 
         bool CanInvoke(GameObject otherGameObject)

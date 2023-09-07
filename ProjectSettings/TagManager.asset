@@ -21,6 +21,7 @@ TagManager:
   - TargetScrewParts2
   - Screw1
   - RestricedArea
+  - Hands
   layers:
   - Default
   - TransparentFX

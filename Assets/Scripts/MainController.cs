@@ -14,7 +14,7 @@ public class MainController : MonoBehaviour
     public Vector3 DragObjectpostion;
     public GameObject[] button;
     public int i,ButtonCount;
-    public GameObject LeftRayCast,RightRayCast;
+    public GameObject RightRayCast;
     public static MainController Instance;
     public bool ButtonAcess;
     public GameObject[] TargetObjects;
@@ -25,6 +25,7 @@ public class MainController : MonoBehaviour
     public bool StopColorBlinking;
     public GameObject HandControllerScreen;
     public GameObject MainModuleScreen;
+    public GameObject set1,set2, screw1,screw2;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
@@ -79,7 +80,7 @@ public class MainController : MonoBehaviour
         if (ButtonAcess)
         {
             ButtonCount++;
-            LeftRayCast.SetActive(false);
+           
             RightRayCast.SetActive(false);
             
             print(ButtonCount);
@@ -93,6 +94,7 @@ public class MainController : MonoBehaviour
                 InformationText.text = "Pick The Object Place in Correct Manner";
                 HighLightParts[0].SetActive(true);
                 
+                
 
             }
             else if (id == 1)
@@ -100,6 +102,8 @@ public class MainController : MonoBehaviour
                 DragObject[1].SetActive(true);
                 HighLightParts[1].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
+                print("2");
+               
             }
             else if (id == 2)
             {
@@ -148,17 +152,18 @@ public class MainController : MonoBehaviour
             button[ButtonCount].GetComponent<Button>().interactable = true;
             InformationText.text = "Click on Part3";
             StopColorBlinking = false;
+            print(ButtonCount);
 
         }
     }
     public void RayCastControllerOn()
     {
-        LeftRayCast.SetActive(true);
+       
         RightRayCast.SetActive(true);
     }
     public void RayCastControllerOff()
     {
-        LeftRayCast.SetActive(false);
+       
         RightRayCast.SetActive(false);
     }
     public void ButtonAcessOn(int id)
@@ -167,10 +172,13 @@ public class MainController : MonoBehaviour
         RayCastControllerOn();
         if (id == 0)
         {
+            print("testuuu");
             DragObject[0].SetActive(false);
             HighLightParts[0].SetActive(false);
             TargetObjects[0].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Tighen Screws by clicking on Screw";
+            set1.SetActive(true);
+            screw1.SetActive(true);
             //  ScrewPart1();
         }
         if (id == 1)
@@ -179,6 +187,8 @@ public class MainController : MonoBehaviour
             HighLightParts[1].SetActive(false);
             TargetObjects[1].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Tighen Screws by clicking on Screw";
+            set2.SetActive(true);
+            screw2.SetActive(true);
 
         }
         if (id == 2)
