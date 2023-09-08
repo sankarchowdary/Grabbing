@@ -27,6 +27,8 @@ public class MainController : MonoBehaviour
     public GameObject MainModuleScreen;
     public GameObject set1,set2, screw1,screw2;
     public GameObject OpenScreen;
+    public AudioClip[] audios;
+    public AudioSource Mainsource;
     float timer = 0;
     // Start is called before the first frame update
     void Start()
@@ -94,8 +96,10 @@ public class MainController : MonoBehaviour
                 DragObject[0].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
                 HighLightParts[0].SetActive(true);
-                
-                
+
+                Mainsource.clip = audios[4];
+                Mainsource.Play();
+
 
             }
             else if (id == 1)
@@ -104,7 +108,9 @@ public class MainController : MonoBehaviour
                 HighLightParts[1].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
                 print("2");
-               
+                Mainsource.clip = audios[4];
+                Mainsource.Play();
+
             }
             else if (id == 2)
             {
@@ -112,6 +118,9 @@ public class MainController : MonoBehaviour
                 DragObject[2].SetActive(true);
                 HighLightParts[2].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
+                Mainsource.clip = audios[4];
+                Mainsource.Play();
+
             }
             else if (id == 3)
             {
@@ -119,6 +128,9 @@ public class MainController : MonoBehaviour
                 DragObject[3].SetActive(true);
                 HighLightParts[3].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
+                Mainsource.clip = audios[4];
+                Mainsource.Play();
+
             }
             else if (id == 4)
             {
@@ -126,6 +138,9 @@ public class MainController : MonoBehaviour
                 DragObject[4].SetActive(true);
                 HighLightParts[4].SetActive(true);
                 InformationText.text = "Pick The Object Place in Correct Manner";
+                Mainsource.clip = audios[4];
+                Mainsource.Play();
+
             }
             ButtonAcess = false;
         }
@@ -140,6 +155,8 @@ public class MainController : MonoBehaviour
             button[ButtonCount].GetComponent<Button>().interactable = true;
 
             InformationText.text = "Click on Part2";
+            Mainsource.clip = audios[1];
+            Mainsource.Play();
            
 
         }
@@ -156,6 +173,8 @@ public class MainController : MonoBehaviour
             InformationText.text = "Click on Part3";
             StopColorBlinking = false;
             print(ButtonCount);
+            Mainsource.clip = audios[2];
+            Mainsource.Play();
 
         }
     }
@@ -182,6 +201,9 @@ public class MainController : MonoBehaviour
             InformationText.text = "Tighen Screws by clicking on Screw";
             set1.SetActive(true);
             screw1.SetActive(true);
+            Mainsource.clip = audios[5];
+            Mainsource.Play();
+
             //  ScrewPart1();
         }
         if (id == 1)
@@ -192,6 +214,9 @@ public class MainController : MonoBehaviour
             InformationText.text = "Tighen Screws by clicking on Screw";
             set2.SetActive(true);
             screw2.SetActive(true);
+            Mainsource.clip = audios[5];
+            Mainsource.Play();
+
 
         }
         if (id == 2)
@@ -201,6 +226,9 @@ public class MainController : MonoBehaviour
             TargetObjects[2].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Click On Part4";
             OpenScreen.SetActive(true);
+            Mainsource.clip = audios[3];
+            Mainsource.Play();
+
         }
         if (id == 3)
         {
@@ -208,6 +236,9 @@ public class MainController : MonoBehaviour
             HighLightParts[3].SetActive(false);
             TargetObjects[3].GetComponent<MeshRenderer>().enabled = true;
             InformationText.text = "Click On Part5";
+            Mainsource.clip = audios[3];
+            Mainsource.Play();
+
             OpenScreen.SetActive(true);
         }
         if (id == 4)
@@ -218,6 +249,8 @@ public class MainController : MonoBehaviour
             InformationText.text = "Click On Part6";
             HandControllerScreen.SetActive(true);
             MainModuleScreen.SetActive(false);
+            Mainsource.clip = audios[6];
+            Mainsource.Play();
 
         }
 
